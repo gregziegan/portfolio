@@ -185,7 +185,7 @@ def new_blog_post():
         g.db.execute('insert into blog_post (title, content, poster_id) values (?, ?, ?)', [title, content, poster_id])
         g.db.commit()
         return redirect(url_for('blog'))
-    return render_template('blog_post.html')
+    return render_template('blog_post.html', post=None)
 
 @requires_admin
 @app.route('/edit_blog_post/<regex("\d+"):post_id>', methods=['GET', 'POST'])
