@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="{{ url_for('new_blog_post') }}" method="post">
+  <input type="text" id="title" name="title" class="form-control" value="{{ post.title }}">
+  <textarea id="content" name="content" class="form-control" rows=20 style="resize:vertical;">{{ post.content|nl2br }}</textarea>
+  <button type="submit" class="btn btn-primary">Post Entry</button>
+</form>
+{% endblock %}

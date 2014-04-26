@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="row">
+    <div class="box">
+      <div class="col-md-4">
+        <div class="well">
+          <img src="{{ url_for('static', filename='img/profile_pic.jpg') }}" class="img-responsive img-full" alt="">
+        </div>
+      </div>
+      <div class="col-md-8">
+        <hr>
+        <h2 class="intro-text text-center">About Me</h2>
+        <hr>
+        <hr class="visible-xs">
+        <p>I'm a part-time software developer and third-year student at <a href="http://www.case.edu/">Case Western Reserve University.</a></p>
+        <p>I am passionate about the development of intelligent software and machine learning. Web programming has been hobby of mine that has turned into a full-time job when I'm not in class.</p>
+        <p>I'm currently familiarizing myself with machine learning and I write side projects attempting to implement algorithms I've learned in class. I have yet to find a more fascinating area of CS than Artificial Intelligence. If <i>you</i> know one, I'm all ears!</p>
+        <p>Besides writing code, I compose music, strum/pick on the guitar, and rattle the snare on drums. A <a href="http://www.botterdre.com" target="_blank">song generator</a> is in the works so I can stop using my brain to compose. For now, it only generates lyrics, but I'm setting a deadline here to have it make grammatically correct sentences, create sheet music, and midi songs by the end of summer 2014.</p>
+        <br><br>
+        <h6>Download this <a href="{{ url_for('static', filename='greg_ziegan_biosketch.pdf') }}" target="_blank">BIOSKETCH</a></h6>
+      </div>
+    </div>
+  </div>
+{% endblock %}

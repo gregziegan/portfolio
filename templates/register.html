@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Register User</h2>
+  {% if error %}<div class="alert alert-danger"><strong>Oh snap!</strong> {{ error }}</div>{% endif %}
+  <form action="" method=post>
+    <dl>
+      <dt>Username:
+      <dd><input type=text class="form-control" name=username value="{{ request.form.username }}">
+      <dt>E-Mail:
+      <dd><input type=text class="form-control" name=email value="{{ request.form.email }}">
+      <dt>Password:
+      <dd><input type=password class="form-control" name=password>
+      <dt>Password <small>(repeat)</small>:
+      <dd><input type=password class="form-control" name=password2>
+      <dt>Is Admin
+      <dd><div class="checkbox"><label><input name="is_admin" type="checkbox" value="1">Is Admin</label></div>
+    </dl>
+    <button class="btn btn-primary" type=submit>Create User</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+    <div class="box">
+        <div class="col-md-12 text-center">
+            <div id="carousel-example-generic" class="carousel slide">
+                <ol class="carousel-indicators hidden-xs">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img class="img-responsive img-full" src="{{ url_for('static', filename='img/typing.jpg') }}" alt="">
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive img-full" src="{{ url_for('static', filename='img/drum_music.jpg') }}" alt="">
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive img-full" src="{{ url_for('static', filename='img/italia_rimini.jpg') }}" alt="">
+                    </div>
+                </div>
+
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
+            </div>
+            <h1>
+                <span class="brand-name">Some Ramblings about programming</span>
+            </h1>
+            <hr class="tagline-divider">
+            <h2><small>and other miscellanea</small></h2>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="row">
+    <div class="box">
+        <div class="col-lg-12">
+            <hr>
+            <h2 class="intro-text text-center">{{ most_recent_post.title }}</h2>
+            <hr>
+            <hr class="visible-xs">
+            {{ most_recent_post.content|nl2br }}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+    // Activates the Carousel
+    $('.carousel').carousel({
+        interval: 5000
+    })
+{% endblock %}

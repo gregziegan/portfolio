@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if g.user and g.user.is_admin == 1 %}
+<div class="row">
+    <a href="{{ url_for('new_blog_post') }}" class="btn btn-primary btn-lg pull-right">New Blog Post <span class="glyphicon glyphicon-plus"></span></a>
+</div>
+<br>
+{% endif %}
+{% for post in blog_posts %}
+  <div class="row">
+    <div class="box">
+      <div class="col-lg-12">
+        <hr>
+        <h2 class="intro-text text-center">{{ post.title }}</h2>
+        <hr>
+        <hr class="visible-xs">
+        {{ post.content|nl2br }}
+        {% if g.user and g.user.is_admin == 1 %}
+        <a href="{{ url_for('edit_blog_post', post_id=post.post_id) }}" class="btn btn-info">Edit Post <span class="glyphicon glyphicon-edit"></span></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+{% endblock %}
