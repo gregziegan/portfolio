@@ -156,10 +156,10 @@ def blog():
 def resume():
     return render_template('resume.html')
 
-@requires_login
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
+        print "in post"
         email = request.form['email']
         message = request.form['message']
         if g.user:
@@ -167,8 +167,8 @@ def contact():
                           [email, message, g.user['user_id']])
             g.db.commit()
         else:
-            name = request.form['name']
-            g.db.execute('insert into private_message (name, email, message) values (?, ?)',
+            name = request.form['contact_name']
+            g.db.execute('insert into private_message (name, email, message) values (?, ?, ?)',
                           [name, email, message])
             g.db.commit()
         return redirect(url_for('index'))
