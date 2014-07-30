@@ -147,6 +147,10 @@ def index():
 def about():
     return render_template('about.html')
 
+@app.route('/pyohio14-presentation')
+def pyohio_presentation():
+    return render_template('pyohio14_presentation.html')
+
 @app.route('/blog')
 def blog():
     blog_posts = query_db('select * from blog_post limit 5')
@@ -198,6 +202,7 @@ def edit_blog_post(post_id):
         return redirect(url_for('blog'))
     post = query_db('select * from blog_post where post_id = ?', [post_id], one=True)
     return render_template('blog_post.html', post=post)
+
 
 if __name__ == '__main__':
     app.run()
