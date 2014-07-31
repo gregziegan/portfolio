@@ -400,7 +400,7 @@ Make them a manager, of course.
 # Making I/O Managers
 
 
-![Clean Architecture](/imgs/CleanArchitecture.jpg)
+![Clean Architecture](static/presentations/imgs/CleanArchitecture.jpg)
 
 
 What does this mean for the individual spider?
@@ -573,7 +573,7 @@ No more:
     address = get_correct_address(Model.field_info)
 
 
-![Swag](/imgs/swag.gif)
+![Swag](static/presentations/imgs/swag.gif)
 
 
 Do you really want to play with your 
