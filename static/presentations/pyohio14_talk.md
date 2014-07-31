@@ -632,13 +632,13 @@ And you'll forget what you did.
 ## Surprise functional programming talk!
 
 
-### This design paradigm is a core tenant of FP
+### This design paradigm is a core tenet of FP
 
 
 Ever hear of Lisp, Scheme, Clojure, F#?
 
 
-They aren't the most popular languages, but the forward trend in Python is implementing core tenants of functional languages.
+They aren't the most popular languages, but the forward trend in Python is implementing core tenets of functional languages.
 
 
 Functions like:
