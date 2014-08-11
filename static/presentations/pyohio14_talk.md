@@ -93,16 +93,6 @@ We use MySQL, why would we convert or consider converting?
 
 
 
-## Transactional DDL
-
-
-Excellent support for schema changes (migrations)
-
-
-Hopefully less corruptions, if the programmer is careful!
-
-
-
 ## Exotic types
 
 
