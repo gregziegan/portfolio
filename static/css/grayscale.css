@@ -127,7 +127,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url(../img/sunset.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -242,10 +242,11 @@ a:focus {
 }
 
 .download-section {
+    height: 600px;
     width: 100%;
     padding: 50px 0;
-    color: #fff;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+    color: #28C3AB;
+    background: url(../img/arrested_dev.jpg) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -254,10 +255,12 @@ a:focus {
 }
 
 .tech-section {
+    height: 600px;
     width: 100%;
     padding: : 50px 0;
-    color:  #fff;
-    background: url(../img/intro-bg.jpg) no-repeat center center scroll;
+    color:  #232a32;
+    background: url(../img/skyline.jpg) no-repeat center center scroll;
+    font-color: #fffff;
     background-color: : #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
