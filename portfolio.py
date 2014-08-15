@@ -13,6 +13,7 @@ import datetime
 import json
 import re
 import sqlite3
+import argparse
 
 app = Flask(__name__)
 app.config.from_object('config')
@@ -205,4 +206,10 @@ def edit_blog_post(post_id):
 
 
 if __name__ == '__main__':
-    app.run()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--port", help="select port", type=int)
+    args = parser.parse_args()
+    if args.port:
+        app.run(port=args.port)
+    else:
+        app.run()
