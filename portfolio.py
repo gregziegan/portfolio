@@ -152,6 +152,10 @@ def about():
 def pyohio_presentation():
     return render_template('pyohio14_presentation.html')
 
+@app.route('/ad-classification-presentation')
+def ad_classification_presentation():
+    return render_template('ad_classification_presentation.html')
+
 @app.route('/blog')
 def blog():
     blog_posts = query_db('select * from blog_post limit 5')
